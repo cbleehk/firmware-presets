@@ -860,40 +860,6 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/4.3/other/bonfpv_mambaf7.txt",
-      "hash": "f647633fc4d2f35df31c1e1c2e04f783ff13073b145d6b4e361d12228e7af88f",
-      "title": "4.3 BonFPV Full Diff (Mamba)",
-      "firmware_version": [
-        "4.3"
-      ],
-      "category": "OTHER",
-      "status": "OFFICIAL",
-      "keywords": [
-        "race",
-        "switchback",
-        "bonfpv"
-      ],
-      "author": "BonFPV",
-      "priority": 0
-    },
-    {
-      "fullPath": "presets/4.3/other/bonfpv_wizzf7.txt",
-      "hash": "fce456c2ae889d3b000e0c41d1995726413714c1887f304942282afed258b281",
-      "title": "4.3 BonFPV Full Diff (WizzF7)",
-      "firmware_version": [
-        "4.3"
-      ],
-      "category": "OTHER",
-      "status": "OFFICIAL",
-      "keywords": [
-        "race",
-        "switchback",
-        "bonfpv"
-      ],
-      "author": "BonFPV",
-      "priority": 0
-    },
-    {
       "fullPath": "presets/4.3/other/gyroflow_min_blackbox.txt",
       "hash": "15c71e564d549b8e3abd80026c83ff17241606137af32dd5a7b6f42ee228cc4c",
       "title": "Gyroflow minimum settings",
@@ -2373,6 +2339,57 @@
       ],
       "author": "UAV Tech (Mark Spatz)",
       "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/4.3/tune/bonfpv_any.txt",
+      "hash": "3e5a85635e8e0f90798fcec5863658ff84052ea3b68a301da2fcaacec4ce7439",
+      "title": "4.3 BonFPV Tune, Filters & Rates",
+      "firmware_version": [
+        "4.3"
+      ],
+      "category": "OTHER",
+      "status": "OFFICIAL",
+      "keywords": [
+        "race",
+        "switchback",
+        "bonfpv"
+      ],
+      "author": "BonFPV",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.3/tune/bonfpv_mambaf7.txt",
+      "hash": "f647633fc4d2f35df31c1e1c2e04f783ff13073b145d6b4e361d12228e7af88f",
+      "title": "4.3 BonFPV Full Diff (Mamba)",
+      "firmware_version": [
+        "4.3"
+      ],
+      "category": "OTHER",
+      "status": "OFFICIAL",
+      "keywords": [
+        "race",
+        "switchback",
+        "bonfpv"
+      ],
+      "author": "BonFPV",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.3/tune/bonfpv_wizzf7.txt",
+      "hash": "fce456c2ae889d3b000e0c41d1995726413714c1887f304942282afed258b281",
+      "title": "4.3 BonFPV Full Diff (WizzF7)",
+      "firmware_version": [
+        "4.3"
+      ],
+      "category": "OTHER",
+      "status": "OFFICIAL",
+      "keywords": [
+        "race",
+        "switchback",
+        "bonfpv"
+      ],
+      "author": "BonFPV",
+      "priority": 0
     },
     {
       "fullPath": "presets/4.3/tune/ctzsnooze_5in_4S_race.txt",
