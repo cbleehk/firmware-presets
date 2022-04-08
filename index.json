@@ -860,9 +860,26 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/4.3/other/bonfpv.txt",
-      "hash": "d02179e659e1fb4d866fe6c72a84d43a99ddf3398b9037c790192f0cf57eb64b",
-      "title": "4.3 BonFPV Full Diff",
+      "fullPath": "presets/4.3/other/bonfpv_mambaf7.txt",
+      "hash": "f647633fc4d2f35df31c1e1c2e04f783ff13073b145d6b4e361d12228e7af88f",
+      "title": "4.3 BonFPV Full Diff (Mamba)",
+      "firmware_version": [
+        "4.3"
+      ],
+      "category": "OTHER",
+      "status": "OFFICIAL",
+      "keywords": [
+        "race",
+        "switchback",
+        "bonfpv"
+      ],
+      "author": "BonFPV",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.3/other/bonfpv_wizzf7.txt",
+      "hash": "fce456c2ae889d3b000e0c41d1995726413714c1887f304942282afed258b281",
+      "title": "4.3 BonFPV Full Diff (WizzF7)",
       "firmware_version": [
         "4.3"
       ],
