@@ -1,0 +1,175 @@
+#$ TITLE: 4.3 BonFPV Tune, Filters & Rates
+#$ FIRMWARE_VERSION: 4.3
+#$ CATEGORY: OTHER
+#$ STATUS: OFFICIAL
+#$ KEYWORDS:  race, switchback, bonfpv
+#$ AUTHOR: BonFPV
+#$ DESCRIPTION: For quick setup of a new 5" Race Build
+#$ DESCRIPTION: Setup your own ports, config, modes, rc
+#$ DESCRIPTION: Checkout my IG: https://www.instagram.com/bonfpv/
+#$ DESCRIPTION: Checkout my YT: https://www.youtube.com/channel/UCqY6vEH87iJOz0NjOQurwXg
+
+
+# master
+set acc_hardware = NONE
+set mag_hardware = NONE
+set baro_hardware = NONE
+set min_check = 1000
+set max_check = 2000
+set min_throttle = 1070
+set dshot_bidir = ON
+set use_unsynced_pwm = OFF
+set motor_pwm_protocol = DSHOT600
+set motor_pwm_rate = 480
+set yaw_motors_reversed = ON
+
+set anti_gravity_gain = 5000
+set iterm_relax_cutoff = 20
+set iterm_limit = 500
+set pidsum_limit_yaw = 1000
+set throttle_boost = 2
+set p_pitch = 45
+set i_pitch = 92
+set d_pitch = 40
+set f_pitch = 150
+set p_roll = 43
+set i_roll = 90
+set d_roll = 37
+set f_roll = 155
+set p_yaw = 39
+set i_yaw = 85
+set f_yaw = 150
+set d_min_roll = 20
+set d_min_pitch = 22
+set d_max_gain = 25
+set d_max_advance = 0
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 5
+set feedforward_boost = 12
+set feedforward_max_rate_limit = 100
+set simplified_pids_mode = OFF
+
+set tpa_rate = 60
+set tpa_breakpoint = 1250
+
+#$ OPTION BEGIN (UNCHECKED): LED On - Dimmed Red
+# led
+    feature LED_STRIP
+    led 0 2,7::C:2
+    led 1 3,7::C:2
+    led 2 4,7::C:2
+    led 3 5,7::C:2
+    led 4 6,7::C:2
+    led 5 7,7::C:2
+    led 6 8,7::C:2
+    led 7 9,7::C:2
+    led 8 10,7::C:2
+    led 9 11,7::C:2
+    set ledstrip_brightness = 31
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Apply Bon's Filters
+    set gyro_lpf1_static_hz = 0
+    set gyro_lpf2_static_hz = 625
+    set dyn_notch_count = 1
+    set dyn_notch_q = 600
+    set dyn_notch_min_hz = 185
+    set dyn_notch_max_hz = 550
+    set gyro_lpf1_dyn_min_hz = 0
+    set gyro_lpf1_dyn_max_hz = 0
+    set simplified_gyro_filter_multiplier = 125
+    set rpm_filter_harmonics = 2
+    set rpm_filter_min_hz = 150
+    set rpm_filter_fade_range_hz = 100
+    set dterm_lpf1_dyn_min_hz = 90
+    set dterm_lpf1_dyn_max_hz = 180
+    set dterm_lpf1_static_hz = 90
+    set dterm_lpf2_static_hz = 180
+    set yaw_lowpass_hz = 0
+    set simplified_dterm_filter_multiplier = 120
+#$ OPTION END
+
+#$ OPTION_GROUP BEGIN: Some racing RC_LINK presets
+    #$ OPTION BEGIN (UNCHECKED): 150hz link
+        #$ INCLUDE: presets/4.3/rc_link/generic/150hz_race.txt
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): 250hz link
+        #$ INCLUDE: presets/4.3/rc_link/generic/250hz_race.txt
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): 500hz link
+        #$ INCLUDE: presets/4.3/rc_link/generic/500hz_race.txt
+    #$ OPTION END
+#$ OPTION_GROUP END
+
+#$ OPTION BEGIN (UNCHECKED): Bon's rates
+    set rates_type = BETAFLIGHT
+    set roll_rc_rate = 126
+    set pitch_rc_rate = 90
+    set yaw_rc_rate = 102
+    set roll_expo = 10
+    set roll_srate = 56
+    set pitch_srate = 65
+    set yaw_srate = 55
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Bon's OSD
+    set osd_vbat_pos = 2433
+    set osd_rssi_pos = 57
+    set osd_link_quality_pos = 2070
+    set osd_tim_1_pos = 405
+    set osd_tim_2_pos = 2454
+    set osd_flymode_pos = 2424
+    set osd_throttle_pos = 2049
+    set osd_vtx_channel_pos = 2401
+    set osd_craft_name_pos = 2058
+    set osd_warnings_pos = 14601
+    set osd_disarmed_pos = 2283
+    set osd_flip_arrow_pos = 2254
+    set osd_stat_battery = ON
+#$ OPTION END
+
+
+#$ OPTION BEGIN (UNCHECKED): TBS Pro32 Nano VTX Table
+    vtxtable bands 5
+    vtxtable channels 8
+    vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+    vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+    vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+    vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+    vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+    vtxtable powerlevels 4
+    vtxtable powervalues 14 20 26 36
+    vtxtable powerlabels 25 100 400 MAX
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): Bon's AUX & RX Settings
+    # beacon
+    beacon RX_SET
+
+    # feature
+    feature -RX_PARALLEL_PWM
+    feature RX_SERIAL
+    feature TELEMETRY
+
+    # serial
+    serial 0 64 115200 57600 0 115200
+    serial 4 2048 115200 57600 0 115200
+
+    # beacon
+    beacon RX_SET
+
+    # rx stuff
+    set serialrx_provider = CRSF
+    map TAER1234
+
+    # aux
+    aux 0 0 2 1700 2100 0 0
+    aux 1 0 1 1700 2100 0 0
+    aux 2 13 3 1700 2100 0 0
+    aux 3 35 1 1700 2100 0 0
+    aux 4 39 5 1700 2100 0 0
+#$ OPTION END
+ 
