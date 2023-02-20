@@ -52,6 +52,7 @@ set simplified_pids_mode = OFF
 
 set tpa_rate = 60
 set tpa_breakpoint = 1250
+set dshot_idle_value = 450
 
 set name = BonFPV
 
