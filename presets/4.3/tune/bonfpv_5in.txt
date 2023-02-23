@@ -46,7 +46,6 @@ set d_max_advance = 0
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 3
-set feedforward_boost = 30
 set feedforward_max_rate_limit = 100
 set simplified_pids_mode = OFF
 
@@ -178,3 +177,4 @@ set name = BonFPV
     aux 4 39 5 1700 2100 0 0
 #$ OPTION END
  
+set feedforward_boost = 30
